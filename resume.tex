@@ -1,0 +1,275 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage{enumitem}
+    \usepackage{CJK}
+    \usepackage{bibentry}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+\usepackage{etoolbox}
+\patchcmd{\thebibliography}{\section*{\refname}}{}{}{}
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \textsc{#1}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+% END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+\begin{CJK*}{UTF8}{gkai}
+\vspace*{-40pt}
+
+    
+
+%==== Profile ====%
+\vspace*{-10pt}
+
+\begin{center}
+	{\Huge \scshape {Yong Li (李勇)}}\\
+	\bigskip 
+	+86 185 1583 1627 $\cdot$ liyong@ios.ac.cn\\
+	Building 5, South Fourth Street 4\#,
+Zhongguancun, Haidian District, Beijing, China\\
+\end{center}
+
+%==== Education ====%
+\header{\textbf{Education}}
+
+\textbf{Unversity of Chinese Academy of Sciences}\hfill Beijing, China\\
+\textbf{Institute of Software, Chinese Academy of Sciences}\hfill Beijing, China\\
+
+Pursuing Ph.D. in Computer Software and Theory \hfill Sept. 2013 - present \\
+Advisor: Prof. Lijun Zhang \\
+(I successfully defended my Ph.D. thesis entitled "Novel Learning and Complementation Algorithms for B\"uchi Automata" in Nov. 2019 and I am expected to graduate in Jan. 2020)\\
+\bigskip
+\textbf{Nanjing Unversity of Posts and Telecommunications}\hfill Nanjing, China\\
+Bachelor of Computer Science and Technology \hfill Sept. 2009 - Jun. 2013 \\
+\vspace{2mm}
+
+
+%==== AWARDS ====%
+
+\header{\textbf{Awards and Honors}}
+
+\begin{itemize}
+\item CAS President Scholarship \hfill Jul. 2019
+\item China National Scholarship \hfill Nov. 2018
+\item First Class Scholarship for Ph.D. Student \hfill Sept. 2017
+\item First Class Scholarship for Ph.D. Student \hfill Sept. 2016
+\item China National Scholarship \hfill Nov. 2010
+\item Traval grants: TACAS 2017
+\end{itemize}
+
+
+
+%==== Research stays ====%
+
+\header{\textbf{Research Stays}}
+\textbf{Department of Computer Science, Rice Unversity}\hfill Houston, USA\\
+Host: Prof. Moshe Y. Vardi \hfill Feb. 1 - Jun. 30 2019 \\
+\vspace{2mm}
+
+\textbf{Institute of Information Science, Academia Sinica}\hfill Taipei, China\\
+Host: Dr. Yu-Fang Chen \hfill Jul. 11 - Jul. 26 2018 \\
+\vspace{2mm}
+\textbf{Institute of Information Science, Academia Sinica}\hfill Taipei, China\\
+Host: Dr. Yu-Fang Chen \hfill Jan. 27 -  Feb. 9 2018 \\
+
+\vspace{2mm}
+
+\textbf{Institute of Information Science, Academia Sinica}\hfill Taipei, China\\
+Host: Dr. Yu-Fang Chen \hfill Nov. 3 -  Nov. 18 2017 \\
+
+\vspace{2mm}
+
+\textbf{Institute of Information Science, Academia Sinica}\hfill Taipei, China\\
+Host: Dr. Yu-Fang Chen \hfill Aug. 22 - Sept. 6 2017 \\
+
+\vspace{2mm}
+
+\textbf{Institute of Information Science, Academia Sinica}\hfill Taipei, China\\
+Host: Dr. Yu-Fang Chen \hfill May 17 - May 31 2017 \\
+
+\vspace{2mm}
+
+\textbf{Dependable Systems and Software Group, Saarland University}\hfill Saarbr\"ucken, Germany\\
+Host: Prof. Holger Hermanns \hfill Feb. 1 - Feb. 15 2016 \\
+
+\vspace{2mm}
+
+\textbf{Software Modelling and Verification Group, RWTH Aachen}\hfill Aachen, Germany\\
+Host: Prof. Joost-Pieter Katoen \hfill Oct. 17 2015 - Jan. 31 2016 \\
+
+\vspace{2mm}
+
+%==== Talks ====%
+\header{\textbf{Talks}}
+
+\begin{enumerate}
+\item Advanced Automata-based Algorithms for Program Termination Checking.
+Workshop on SoftWare Analysis and Verification (SAVE 2018), Hangzhou, China.
+May 26 - May 27, 2018
+
+\item Verify LTL with Fairness Assumptions Efficiently.
+The 3rd Young Researchers Workshop on Formal Methods (YR-SETTA 2017), Changsha, China.
+Oct. 20 - Oct. 26, 2017
+
+\item A Novel Learning Algorithm for {B\"uchi} Automata based on Family of {DFA}s and Classification Trees.
+23rd International Conference on Tools and Algorithms for the Construction and Analysis of Systems  (TACAS 2017), Uppsala, Sweden.
+Apr. 24 - Apr. 28, 2017
+
+\item An Efficient Synthesis Algorithm for Parametric Markov Chains Against Linear Time Properties.
+2nd International Symposium on Dependable Software Engineering: Theories, Tools and Applications (SETTA 2016), Beijing, China.
+Nov. 9 - Nov. 11, 2016
+
+\item Verify LTL with Fairness Assumptions Efficiently.
+23rd International Symposium on Temporal Representation and Reasoning (TIME 2016), Copenhagen, Denmark.
+Oct. 17 - Oct. 19, 2016
+
+\item Model Checking Fairness LTL Efficiently.
+Dagstuhl seminar on Formal Evaluation of Critical Infrastructures, Dagstuhl, Germany.
+Dec. 6 - Dec. 9, 2015
+\end{enumerate}
+
+
+%==== Publications ====%
+\header{\textbf{Publications}}
+
+\iffalse
+\begin{enumerate}[label={[\theenumi]},leftmargin=\parindent,align=left,labelwidth=\parindent,labelsep=4pt]
+
+\item 
+Suguman Bansal, \textbf{Yong Li}, Lucas M. Tabajara and Moshe Y. Vardi.
+Hybrid Compositional Reseaning for Reactive Synthesis from Finite-Horizon Specifications.
+To appear in Proceedings of the 34th AAAI Conference on Artificial Intelligence (AAAI 2020).
+
+\item 
+Yi Li, Xuechao Sun, \textbf{Yong Li}, Andrea Turrini and Lijun Zhang.
+\textbf{Synthesizing Nested Ranking Functions for Loop Programs via SVM}.
+In Proceedings of the  21st International Conference on Formal Engineering Methods (ICFEM 2019).
+
+\item \textbf{Yong Li}, Xuechao Sun, Andrea Turrini, Yu-Fang Chen, Junnan Xu.
+\textbf{ROLL 1.0: $\omega$-Regular Language Learning Library}.
+In Proceedings of the 25th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2019) 
+
+
+\item 
+Yong Li, Andrea Turrini, Yu{-}Fang Chen and Lijun Zhang.
+\textbf{Learning B{\"{u}}chi Automata and Its Applications}.
+In Tutorial Lectures of the 4th International School on Engineering Trustworthy Software Systems (SETSS 2018).
+\item 
+Yu-Fang Chen, Matthias Heizmann, Ond{\v{r}}ej  Leng\'{a}l, \textbf{Yong Li}, Ming-Hsien Tsai, Andrea Turrini, Lijun Zhang.
+\textbf{Advanced Automata-based Algorithms for Program Termination Checking}.
+In Proceedings of the 39th {ACM} {SIGPLAN} Conference on Programming Language Design and Implementation (PLDI 2018)
+
+\item
+	Matthias Heizmann, Yu-Fang Chen, Daniel Dietsch, Marius Greitschus, Jochen Hoenicke, \textbf{Yong Li}, Alexander Nutz, Betim Musa, Christian Schilling, Tanja Schindler and Andreas Podelski.
+\textbf{Ultimate Automizer and the Search for Perfect Interpolants (Competition Contribution)}.
+In Proceedings of the 24th International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2018) 
+
+\item 
+\textbf{Yong Li}, Andrea Turrini, Lijun Zhang, Sven Schewe.
+\textbf{Learning to Complement B\"uchi Automata}.
+In Proceedings of the 19th International Conference Verification, Model Checking, and Abstract Interpretation (VMCAI 2018)
+
+\item
+\textbf{Yong Li}, Yu-Fang Chen, Lijun Zhang, Depeng Liu.
+\textbf{A Novel Learning Algorithm for {B\"uchi} Automata based on Family of {DFA}s and Classification Trees}.
+In Proceedings of the 23rd International Conference on Tools and Algorithms for the Construction and Analysis of Systems (TACAS 2017)
+ 
+\item  
+\textbf{Yong Li}, Lei Song, Yuan Feng, Lijun Zhang.
+\textbf{Verify LTL with Fairness Assumptions Efficiently}.
+In Proceedings of the 23rd International Symposium on Temporal Representation and Reasoning (TIME 2016)
+
+\item
+\textbf{Yong Li}, Wanwei Liu, Andrea Turrini, Ernst Moritz Hahn, Lijun Zhang.
+\textbf{An Efficient Synthesis Algorithm for Parametric Markov Chains Against Linear Time Properties}.
+In Proceedings of the Second International Symposium on Dependable Software Engineering: Theories, Tools, and Applications (SETTA 2016)
+
+\item 
+
+Tom van Dijk, Ernst Moritz Hahn, David N. Jansen, \textbf{Yong Li}, Thomas Neele, Mari\"elle Stoelinga, Andrea Turrini and Lijun Zhang.
+\textbf{A Comparative Study of BDD Packages for Probabilistic Symbolic Model Checking}.
+In Proceedings of the First International Symposium on Dependable Software Engineering: Theories, Tools, and Applications (SETTA 2015)
+\end{enumerate}
+
+
+
+
+%\printbibheading% <- Prints "References"
+
+\addcontentsline{toc}{section}{Title of the section (my papers?)}
+\fi
+
+\bibliographystyle{unsrt}
+\bibliography{ref}
+
+\nocite{*}
+
+\header{\textbf{Professional Activities}}
+\begin{itemize}
+
+\item Subreviewer: FOSSACS 2020, FM 2019, TASE 2019, ICECCS 2018
+% International Conference on Foundations of Software Science and Computation Structures (FOSSACS 2020), International Symposium on Formal Methods (FM 2019), International Symposium on Theoretical Aspects of Software Engineering (TASE 2019), International Conference on Engineering of Complex Computer Systems (ICECCS 2018)	
+
+\item TACAS 2019 Artifact Evaluation PC member
+
+\end{itemize}
+
+
+\end{CJK*}
+\end{document}
